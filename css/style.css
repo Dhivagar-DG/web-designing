@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+/* NAVBAR */
+li{
+    padding: 5px;
+}
+
+.nav-link{
+    border: 2px solid transparent;
+}
+.nav-link:hover{
+    border-bottom: 2px solid rgb(221, 0, 255);
+    transition: .1s;
+}
+
+/* END OF NAVBAR */
+
+/* SECTION */
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HOME SECTION */
+span{
+    color: blueviolet;
+    font-weight: bold;
+}
+p{
+    font-size: 18px;
+}
+
+/* ABOUT SECTION */
+.about_img{
+    width: 25rem;
+    height: 25rem;
+}
+
+
+/* SERVICES */
+.card img{
+    height: 200px;
+    transition: 1s;
+    cursor: pointer;
+}
+.img-box{
+    overflow: hidden;
+}
+.card img:hover{
+    transform: scale(1.5);
+    transition: 1s;
+}
+
+/* CONTACT */
+form{
+    padding: 40px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    border-radius: 20px;
+}
