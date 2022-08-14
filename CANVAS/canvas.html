@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    
+    
+    <!-- CSS -->
+    <style>
+        body{
+            background: gainsboro;
+        }
+        canvas{
+            border: 2px dotted orangered;
+            color: rgb(255, 128, 0);
+        }
+    </style>
+    
+    
+    <!-- JS -->
+    <script defer>
+        function draw(){
+            const canvas = document.getElementById('canvasId');
+            if(canvas.getContext){
+                const ctx = canvas.getContext('2d');
+                // RECTANGLE
+                ctx.fillStyle = 'rgba(0, 100, 100, .7)';
+                ctx.fillRect(20,20,200,200);
+                ctx.fillStyle = 'rgba(100, 0, 50, .7)';
+                ctx.fillRect(40,100,200,200);
+                ctx.fillStyle = 'rgba(100, 0, 100, .7)';
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = "rgba(100, 0, 100, .7)";
+                ctx.fillRect(100,-20,200,200);
+                ctx.clearRect(110,110,100,60);
+                ctx.strokeRect(115,115,90,50);
+                ctx.moveTo(0,300);
+                ctx.lineTo(300,300);
+                ctx.stroke();
+                ctx.lineTo(300,0);
+                ctx.stroke();
+
+                // TINANGLE
+                ctx.beginPath();
+                ctx.moveTo(75, 50);
+                ctx.lineTo(100,75);
+                ctx.lineTo(75,100);
+                ctx.lineTo(75, 50)
+                ctx.shadowBlur = 20;
+                ctx.shadowColor = "blue";
+                ctx.fill();
+
+                // ROUND
+                ctx.beginPath();
+                ctx.arc(158,140,20, 1,0);
+                ctx.arc(158,140,20, 0,1);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.arc(158,142,15, 0, Math.PI, false);//Clock wise
+                ctx.shadowColor = "orangered";
+                ctx.shadowBlur = 20;
+                ctx.fillStyle = 'rgb(255, 128, 0)';
+                ctx.fill();
+                
+                ctx.beginPath();
+                ctx.arc(158,138,15, 0, Math.PI, true);//Anti clock wise
+                ctx.shadowColor = "gray";
+                ctx.shadowBlur = 20;
+                ctx.fillStyle = 'purple';
+                ctx.fill();
+            }
+        }
+    </script>
+</head>
+
+<body onload="draw()">
+    <canvas id="canvasId" width="600px" height="400px"></canvas>
+</body>
+
+</html>
