@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filter</title>
+
+    <!-- EXTERNAL FILE LINKS -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="imgFilter.css" type="text/css" />
+
+    <!-- JS -->
+    <script src="imgFilter.js" defer></script>
+        
+        <!-- CAMAN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js" integrity="sha512-JjFeUD2H//RHt+DjVf1BTuy1X5ZPtMl0svQ3RopX641DWoSilJ89LsFGq4Sw/6BSBfULqUW/CfnVopV5CfvRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- END OF EXTERNAL FILE LINKS -->
+</head>
+<body onload="draw();">
+    
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="headerTxt">
+                <h1>Image Filter App</h1>
+            </div>
+        </div>
+
+        <!-- IMAGE BODY -->
+        <div class="ImgBody">
+            <div class="canvas">
+                <canvas id="canvasId"></canvas>
+            </div>
+
+            <div class="sideBar">
+                <!-- FILE INPUT -->
+                <div class="fileInput">
+                    Select Image <input type="file" name="imgFileInput" id="imgFileInput">
+                </div>
+
+                <!-- FILTERS -->
+                <div class="filters">
+
+                    <!-- BRIGHTNESS  -->
+                    <div class="brightness">
+                        <div class="brightness-header">
+                            <h2>Brightness</h2>
+                        </div>
+                        <div class="brightness-btn-group">
+                            <button class="filterBtn increaseBright">Increase +</button>
+                            <button class="filterBtn decreaseBright">Decrease -</button>
+                        </div>
+                    </div>
+
+                    <!-- CONTRAST  -->
+                    <div class="contrast">
+                        <div class="contrast-header">
+                            <h2>Contrast</h2>
+                        </div>
+                        <div class="contrast-btn-group">
+                            <button class="filterBtn increaseCont">Increase +</button>
+                            <button class="filterBtn decreaseCont">Decrease -</button>
+                        </div>
+                    </div>
+
+                    <!-- Saturation  -->
+                    <div class="saturation">
+                        <div class="saturation-header">
+                            <h2>Saturation</h2>
+                        </div>
+                        <div class="saturation-btn-group">
+                            <button class="filterBtn increaseSat">Increase +</button>
+                            <button class="filterBtn decreaseSat">Decrease -</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EFFECTS -->
+                <div class="effects">
+                    <!-- EFFECTS HEADER -->
+                    <div class="effects-header">
+                        <h2>Effects</h2>
+                    </div>
+
+                    <!-- EFFECTS BUTTON GROUP -->
+                    <div class="effects-btn-group">
+                        <button class="filterBtn vintage">Vintage</button>
+                        <button class="filterBtn lomo">Lomo</button>
+                        <button class="filterBtn clarity">Clarity</button>
+                    </div>
+
+                    <div class="remove-filter">
+                        <button class="clearBtn" id="removeFilters">Remove filters</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
